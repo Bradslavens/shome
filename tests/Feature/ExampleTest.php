@@ -16,8 +16,27 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $response = $this->get('/');
+        $this->get('/')->assertSee('Welcome to Slavens Realty');
+    }
 
-        $response->assertStatus(200);
+    public function testLoginExists()
+    {
+        $result = $this->get('/login');
+
+        $result->assertStatus(200);
+    }
+
+    public function testRegisterExists()
+    {
+        $result = $this->get('/register');
+
+        $result->assertStatus(200);
+    }
+
+    public function testResetPasswordExists()
+    {
+        $result = $this->get('/password/reset');
+
+        $result->assertStatus(200);
     }
 }
