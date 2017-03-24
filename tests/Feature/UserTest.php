@@ -9,6 +9,8 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class UserTest extends TestCase
 {
+    use DatabaseMigrations;
+
     /**
      * A basic test example.
      *
@@ -19,10 +21,16 @@ class UserTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function testUserExists()
+    public function testUsersExists()
     {
-        $this->assertDatabaseHas('users', [
-            'email'=>'bradslavens@gmail.com',
+        $user = factory(\App\User::class)->make([
+            'email' => 'brad@g.com',
             ]);
+        
+        $email = $user->email;
+
+        $this->assertEquals($email, 'brad@g.com');
+
+
     }
 }
