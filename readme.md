@@ -38,3 +38,5 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## to start chromebrowser headless Xvfb -ac :0 -screen 0 1280x1024x16 &
