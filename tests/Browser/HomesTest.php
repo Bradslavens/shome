@@ -15,8 +15,7 @@ class HomesTest extends DuskTestCase
     public function testExample()
     {
         $this->browse(function ($browser) {
-            $browser->visit('/')
-                    ->assertSee('slavens');
+            $browser->clickLink('Homes');
         });
     }
 }
