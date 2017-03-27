@@ -16,7 +16,7 @@ class ExampleTest extends TestCase
      */
     public function testBasicTest()
     {
-        $this->get('/')->assertSee('Welcome to Slavens Realty');
+        $this->get('/')->assertSee('Slavens Realty');
     }
 
     public function testLoginExists()

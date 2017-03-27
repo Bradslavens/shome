@@ -11,4 +11,9 @@ class HomesController extends Controller
     {
         return view('homes');
     }
+
+    public function show(Homelist $homelist)
+    {
+        $homelist->show();
+    }
 }

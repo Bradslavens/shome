@@ -79,11 +79,11 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Welcome to Slavens Realty
+                    Slavens Realty
                 </div>
 
                 <div class="links">
-                    <a href="#">Homes</a>
+                    <a href="/homes">Homes</a>
                     <a href="#">Agents</a>
                     <a href="#">About Us</a>
                     <a href="#">Contact Us</a>

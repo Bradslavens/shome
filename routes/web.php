@@ -19,5 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
-// list homes 
+// homes 
 Route::get('/homes', 'HomesController@index');
+
+Route::post('/homes', 'HomesController@show');

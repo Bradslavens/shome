@@ -29,6 +29,18 @@ class HomesTest extends TestCase
         $response = $this->get('/homes');
 
         $response->assertStatus(200);
+
+        $response->assertSee('<input');
+
+    }
+
+    public function testHomeSearchPost()
+    {
+        $response = $this->post('homes');
+
+        $response->assertSee('homes');
+
+        $response->assertStatus(200);
     }
 
 
