@@ -12,12 +12,12 @@
 
               <div class="form-group">
                 <label for="streetAddress">Street Address</label>
-                <input type="text" class="form-control" id="streetAddress" placeholder="Street Address">
+                <input name="streetAddress" type="text" class="form-control" id="streetAddress" placeholder="Street Address">
               </div>
 
               <div class="form-group">
                 <label for="CityStateZip">City, State  Zip</label>
-                <input type="text" class="form-control" id="CityStateZip" placeholder="City, State Zip">
+                <input name="CityStateZip" type="text" class="form-control" id="CityStateZip" placeholder="City, State Zip">
               </div>
 
               <button type="submit" class="btn btn-default">Search</button>

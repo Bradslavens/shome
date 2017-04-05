@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Zillow\ZillowClient;
+
 class HomesController extends Controller
 {
     // show the homes page
@@ -12,8 +14,15 @@ class HomesController extends Controller
         return view('homes');
     }
 
-    public function show(Homelist $homelist)
+    public function show(Request $request)
     {
-        $homelist->show();
+        $client = new ZillowClient(env('ZPID'));
+
+        $response = $client->GetSearchResults(
+            ['address' => $request->input('streetAddress'), 'citystatezip' => $request->input('CityStateZip')]);
+
+        $details = $response['results']['result'];
+        
+        return view('searchDetails', ['response'=>$details]);
     }
 }

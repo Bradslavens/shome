@@ -38,7 +38,7 @@ class HomesTest extends TestCase
 
     public function testZillowAPI()
     {
-        $client = new ZillowClient('X1-ZWz1dh454d9sej_5dugt');
+        $client = new ZillowClient(env('ZPID'));
 
         $response = $client->GetSearchResults(['address' => '2460 MacKenzie Creek Rd.', 'citystatezip' => 'Chula Vista, CA 91914']);
 
