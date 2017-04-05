@@ -11,13 +11,8 @@
                 {{ csrf_field() }}
 
               <div class="form-group">
-                <label for="Address1">Address1</label>
-                <input type="text" class="form-control" id="Address1" placeholder="Address1">
-              </div>
-
-              <div class="form-group">
-                <label for="Address2">Address2</label>
-                <input type="text" class="form-control" id="Address2" placeholder="Address2">
+                <label for="streetAddress">Street Address</label>
+                <input type="text" class="form-control" id="streetAddress" placeholder="Street Address">
               </div>
 
               <div class="form-group">

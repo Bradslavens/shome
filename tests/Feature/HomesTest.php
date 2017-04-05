@@ -44,7 +44,7 @@ class HomesTest extends TestCase
 
         $zpid = $response['results']['result']['zpid'];
 
-        $this->assertTrue($zpid, '52521932');
+        $this->assertEquals($zpid, '52521932');
     }
 
 }
