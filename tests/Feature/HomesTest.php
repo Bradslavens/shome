@@ -7,6 +7,8 @@ use Illuminate\Foundation\Testing\WithoutMiddleware;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
+use Zillow\ZillowClient;
+
 class HomesTest extends TestCase
 {
     /**
@@ -34,14 +36,15 @@ class HomesTest extends TestCase
 
     }
 
-    public function testHomeSearchPost()
+    public function testZillowAPI()
     {
-        $response = $this->post('homes');
+        $client = new ZillowClient('X1-ZWz1dh454d9sej_5dugt');
 
-        $response->assertSee('homes');
+        $response = $client->GetSearchResults(['address' => '2460 MacKenzie Creek Rd.', 'citystatezip' => 'Chula Vista, CA 91914']);
 
-        $response->assertStatus(200);
+        $zpid = $response['results']['result']['zpid'];
+
+        $this->assertTrue($zpid, '52521932');
     }
-
 
 }
