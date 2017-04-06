@@ -9,6 +9,10 @@ use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class careersApplicationTest extends TestCase
 {
+
+    use DatabaseMigrations;
+    
+
     /**
      * A basic test example.
      *
@@ -32,8 +36,16 @@ class careersApplicationTest extends TestCase
     {
         $response = $this->post('careers', ['name'=>'Test Agent', 'email'=>'b@d.a', 'bre'=>'11111110', 'source'=>'1']);
 
-        // $response->assertStatus(200);
-
         $response->assertSee('Thank');
+    }
+
+    public function testAgentmodel()
+    {
+        $agent = factory(\App\Agent::class)->make(
+            ['name'=>'joe']);
+
+        $name = $agent->name;
+
+        $this->assertEquals($name,'joe');
     }
 }
