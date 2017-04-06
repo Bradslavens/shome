@@ -19,12 +19,13 @@ class propertySearchTest extends TestCase
         $this->assertTrue(true);
     }
 
-    public function testPropertSearchSubmission()
+    public function testPropertySearchSubmission()
     {
         // post the request
-        $response = $this->post('/homes', ['address' => '2460 MacKenzie Creek Rd.', 'citystatezip' => 'Chula Vista, CA 91914']);
-        
-        $response->assertSee('details');
+        $response = $this->call('POST', 'homes', 
+            ['streetAddress' => '2460 MacKenzie Creek Rd.', 'CityStateZip' => 'Chula Vista, CA 91914']);
+
+        $response->assertSee('Details');
 
     }
 

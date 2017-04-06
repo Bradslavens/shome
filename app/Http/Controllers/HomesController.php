@@ -17,7 +17,7 @@ class HomesController extends Controller
     public function show(Request $request)
     {
         $client = new ZillowClient(env('ZPID'));
-
+        
         $response = $client->GetSearchResults(
             ['address' => $request->input('streetAddress'), 'citystatezip' => $request->input('CityStateZip')]);
 
