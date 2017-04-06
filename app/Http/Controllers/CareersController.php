@@ -36,7 +36,8 @@ class CareersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //return the Thank you Screen
+        return view('thanksForApplying', ['name'=>$request->name]);
     }
 
     /**

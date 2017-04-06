@@ -22,8 +22,11 @@ Route::get('home', 'HomeController@index');
 // homes 
 Route::get('homes', 'HomesController@index');
 
+// show home details
 Route::post('homes', 'HomesController@show');
-
 
 // careers
 Route::get('careers/{source?}', 'CareersController@create');
+
+// careers app
+Route::post('careers', 'CareersController@store');

@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             
 
-            <form method="POST" action="apply">
+            <form method="POST" action="careers">
 
                 {{ csrf_field() }}
 
