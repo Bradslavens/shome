@@ -17,9 +17,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
+Route::get('home', 'HomeController@index');
 
 // homes 
-Route::get('/homes', 'HomesController@index');
+Route::get('homes', 'HomesController@index');
 
-Route::post('/homes', 'HomesController@show');
+Route::post('homes', 'HomesController@show');
+
+
+// careers
+Route::get('careers/{source?}', 'CareersController@create');

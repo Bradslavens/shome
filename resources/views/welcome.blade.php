@@ -83,11 +83,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="/homes">Homes</a>
+                    <a href="homes">Homes</a>
                     <a href="#">Agents</a>
                     <a href="#">About Us</a>
                     <a href="#">Contact Us</a>
-                    <a href="#">Careers</a>
+                    <a href="careers">Careers</a>
                 </div>
             </div>
         </div>
