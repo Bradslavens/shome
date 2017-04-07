@@ -6,7 +6,7 @@
         <div class="col-md-8 col-md-offset-2">
             
 
-            <form method="POST" action="careers">
+            <form method="POST" action="/careers">
 
                 {{ csrf_field() }}
 
@@ -25,7 +25,7 @@
                 <input name="bre" type="number" class="form-control" id="bre" placeholder="CA BRE License Number" >
               </div>
 
-              <hidden name="source" value="{{$source}}">
+              <input type="hidden" name="source" value="{{$source}}">
 
               <button type="submit" class="btn btn-default">Apply</button>
             </form>

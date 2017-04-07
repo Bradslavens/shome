@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Agent;
+
 class CareersController extends Controller
 {
     /**
@@ -36,6 +38,16 @@ class CareersController extends Controller
      */
     public function store(Request $request)
     {
+        // save the agent
+        $agent = new Agent;
+
+        $agent->name = $request->name;
+        $agent->email = $request->email;
+        $agent->bre = $request->bre;
+        $agent->source = $request->source;
+
+        $agent->save();
+
         //return the Thank you Screen
         return view('thanksForApplying', ['name'=>$request->name]);
     }
