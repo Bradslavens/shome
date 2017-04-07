@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "3ba9619c9b11a6a93d320110f48a771b",
+    "content-hash": "e05828ed5ba654e2e4923700e095b4d2",
     "packages": [
         {
             "name": "dfreer/zillow",
