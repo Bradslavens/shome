@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\AgentAppThankYouMailer;
+use App\Mail\NotifyBrokerOfAgentApp;
 
 use App\Agent;
 
@@ -47,6 +50,10 @@ class CareersController extends Controller
         $agent->source = $request->source;
 
         $agent->save();
+
+        Mail::to($agent->email)->send(new AgentAppThankYouMailer($agent));
+
+        Mail::to(env('BROKEREMAIL'))->send(new NotifyBrokerOfAgentApp($agent));
 
         //return the Thank you Screen
         return view('thanksForApplying', ['name'=>$request->name]);
