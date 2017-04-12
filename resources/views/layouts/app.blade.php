@@ -80,6 +80,18 @@
 
         @yield('content')
     </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    
+                    <p>Slavens, Inc. dba Slavens Realty, CA BRE License # 01522202, Broker Bradley D. Slavens, CA BRE License # 01382653.</p>
+
+                </div>
+            </div>
+        </div>
+        
+    </footer>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>

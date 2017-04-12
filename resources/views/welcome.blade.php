@@ -85,8 +85,8 @@
                 <div class="links">
                     <a href="homes">Homes</a>
                     <a href="#">Agents</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact Us</a>
+                    <a href="/about">About Us</a>
+                    <a href="/about">Contact Us</a>
                     <a href="/careers/1000">Careers</a>
                 </div>
             </div>

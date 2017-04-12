@@ -30,3 +30,12 @@ Route::get('careers/{source}', 'CareersController@create');
 
 // careers app
 Route::post('careers', 'CareersController@store');
+
+
+// static pages
+Route::get('about', function(){
+
+        return view('about');
+        
+});
+
