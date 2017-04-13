@@ -31,3 +31,11 @@ $factory->define(App\Agent::class, function (Faker\Generator $faker) {
         'source' => $faker->name,
     ];
 });
+
+$factory->define(App\Contact::class, function (Faker\Generator $faker) {
+    return [
+        'name' => $faker->name,
+        'email' => $faker->unique()->safeEmail,
+        'message' => 'Hello There!',
+    ];
+});

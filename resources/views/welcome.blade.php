@@ -86,7 +86,7 @@
                     <a href="homes">Homes</a>
                     <a href="#">Agents</a>
                     <a href="/about">About Us</a>
-                    <a href="/about">Contact Us</a>
+                    <a href="/contact">Contact Us</a>
                     <a href="/careers/1000">Careers</a>
                 </div>
             </div>
