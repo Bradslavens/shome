@@ -34,7 +34,7 @@ class careersApplicationTest extends TestCase
 
     public function testAddAgentApplicantFormSubmission()
     {
-        $response = $this->post('careers', ['name'=>'Test Agent', 'email'=>'b@d.a', 'bre'=>'11111110', 'source'=>'1']);
+        $response = $this->post('careers', ['name'=>'Test Agent', 'email'=>'b@d.a', 'bre'=>'11111110', 'source'=>'1', 'middle' => ""]);
 
         $response->assertSee('Thank');
     }
@@ -48,4 +48,5 @@ class careersApplicationTest extends TestCase
 
         $this->assertEquals($name,'joe');
     }
+
 }

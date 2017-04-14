@@ -41,6 +41,17 @@ class CareersController extends Controller
      */
     public function store(Request $request)
     {
+        // validate form
+        
+        if(!empty($request->middle)){
+            return view('error');
+        }
+        
+        $this->validate($request,[
+            'name'  => 'required|max:255',
+            'email' => 'required|email',
+            'bre'   => 'numeric',
+            ]);
         // save the agent
         $agent = new Agent;
 

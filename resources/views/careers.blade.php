@@ -25,7 +25,20 @@
                 <input name="bre" type="number" class="form-control" id="bre" placeholder="CA BRE License Number" >
               </div>
 
+              <input type="text" name="middle" value="" style="display:none;">
+
               <input type="hidden" name="source" value="{{$source}}">
+
+                {{-- errors --}}
+              @if (count($errors) > 0)
+                <div class="alert alert-danger">
+                    <ul>
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+              @endif
 
               <button type="submit" class="btn btn-default">Apply</button>
             </form>

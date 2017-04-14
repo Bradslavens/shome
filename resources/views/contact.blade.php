@@ -25,6 +25,8 @@
                 <textarea name="message" class="form-control" id="message" placeholder="Please add your message" required></textarea>
               </div>
 
+              <input style="display: none;" type="text" name="middle" value="">
+
               <button type="submit" class="btn btn-default">Send</button>
             </form>
 
